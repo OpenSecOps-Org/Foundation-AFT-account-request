@@ -4,8 +4,8 @@
 # policies before they are applied to other parts of the Org. Remember to
 # substitute the OU ids (ou-xxxx-yyyyyyyy) where applicable. 
 #
-# Also remove the 
-# "-DISABLED" suffix from the file name so AFT and Terraform will process the file.
+# Also remove the "-DISABLED" suffix from the file name so AFT and Terraform 
+# will process the file.
 #
 ###############################################################################
 

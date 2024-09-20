@@ -1,7 +1,10 @@
 ###############################################################################
 #
 # This is the AFT (Account Factory for Terraform) OU. It contains only one
-# account.
+# account. 
+#
+# Remove the "-DISABLED" suffix from the file name so AFT and Terraform
+# will process the file.
 #
 ###############################################################################
 
@@ -32,6 +35,8 @@ module "AFT-Management" {
       "yourcompany-auditors"                = "ReadOnlyWideAccess"
     })
   }
+
+  account_customizations_name = ""
 
   change_management_parameters = {
     change_requested_by = "Your Name Here"

@@ -1,0 +1,154 @@
+###############################################################################
+#
+# This is the PolicyStaging OU, used for developing and testing SCPs and other
+# policies before they are applied to other parts of the Org. Remember to
+# substitute the OU ids (ou-xxxx-yyyyyyyy) where applicable. 
+#
+# Also remove the 
+# "-DISABLED" suffix from the file name so AFT and Terraform will process the file.
+#
+###############################################################################
+
+
+module "PolicyStagingInfraAccount" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail = "accounts+policy-staging-infra@yourcompany.com"
+    AccountName  = "PolicyStagingInfraAccount"
+    ManagedOrganizationalUnit = "PolicyStagingInfra (ou-xxxx-yyyyyyyy)" 
+    SSOUserEmail              = "accounts+org@yourcompany.com"
+    SSOUserFirstName          = "AWS Control Tower"
+    SSOUserLastName           = "Admin"
+  }
+
+  account_tags = {
+    "soar:team"               = "Infra"
+    "soar:team:email"         = "teams+infra@yourcompany.com"    
+    "soar:jira:project-key"   = "INFRA"                            
+    "soar:environment"        = "DEV"                              
+  }
+
+  custom_fields = {
+    "sso_groups" = jsonencode({
+      "yourcompany-cloud-administration"    = "DeveloperAccess"
+      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-auditors"                = "ReadOnlyWideAccess"
+    })
+  }
+
+  account_customizations_name = ""
+
+  change_management_parameters = {
+    change_requested_by = "Your Name Here"
+    change_reason       = "Created account."
+  }
+}
+
+
+module "PolicyStagingSandboxAccount" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail = "accounts+policy-staging-sandbox@yourcompany.com"
+    AccountName  = "PolicyStagingSandboxAccount"
+    ManagedOrganizationalUnit = "PolicyStagingSandbox (ou-xxxx-yyyyyyyy)" 
+    SSOUserEmail              = "accounts+org@yourcompany.com"
+    SSOUserFirstName          = "AWS Control Tower"
+    SSOUserLastName           = "Admin"
+  }
+
+  account_tags = {
+    "soar:team"               = "Infra"
+    "soar:team:email"         = "teams+infra@yourcompany.com"    
+   "soar:jira:project-key"   = "INFRA"                            
+    "soar:environment"        = "DEV"                              
+  }
+
+  custom_fields = {
+    "sso_groups" = jsonencode({
+      "yourcompany-cloud-administration"    = "DeveloperAccess"
+      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-auditors"                = "ReadOnlyWideAccess"
+    })
+  }
+
+  account_customizations_name = ""
+
+  change_management_parameters = {
+    change_requested_by = "Your Name Here"
+    change_reason       = "Created account."
+  }
+}
+
+
+module "PolicyStagingSecurityAccount" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail = "accounts+policy-staging-security@yourcompany.com"
+    AccountName  = "PolicyStagingSecurityAccount"
+    ManagedOrganizationalUnit = "PolicyStagingSecurity (ou-xxxx-yyyyyyyy)" 
+    SSOUserEmail              = "accounts+org@yourcompany.com"
+    SSOUserFirstName          = "AWS Control Tower"
+    SSOUserLastName           = "Admin"
+  }
+
+  account_tags = {
+    "soar:team"               = "Infra"
+    "soar:team:email"         = "teams+infra@yourcompany.com"    
+    "soar:jira:project-key"   = "INFRA"                            
+    "soar:environment"        = "DEV"                              
+  }
+
+  custom_fields = {
+    "sso_groups" = jsonencode({
+      "yourcompany-cloud-administration"    = "DeveloperAccess"
+      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-auditors"                = "ReadOnlyWideAccess"
+    })
+  }
+
+  account_customizations_name = ""
+
+  change_management_parameters = {
+    change_requested_by = "Your Name Here"
+    change_reason       = "Created account."
+  }
+}
+
+
+module "PolicyStagingWorkloadsAccount" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail = "accounts+policy-staging-workloads@yourcompany.com"
+    AccountName  = "PolicyStagingWorkloadsAccount"
+    ManagedOrganizationalUnit = "PolicyStagingWorkloads (ou-xxxx-yyyyyyyy)" 
+    SSOUserEmail              = "accounts+org@yourcompany.com"
+    SSOUserFirstName          = "AWS Control Tower"
+    SSOUserLastName           = "Admin"
+  }
+
+  account_tags = {
+    "soar:team"               = "Infra"
+    "soar:team:email"         = "teams+infra@yourcompany.com"    
+    "soar:jira:project-key"   = "INFRA"                            
+    "soar:environment"        = "DEV"                              
+  }
+
+  custom_fields = {
+    "sso_groups" = jsonencode({
+      "yourcompany-cloud-administration"    = "DeveloperAccess"
+      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-auditors"                = "ReadOnlyWideAccess"
+    })
+  }
+
+  account_customizations_name = ""
+
+  change_management_parameters = {
+    change_requested_by = "Your Name Here"
+    change_reason       = "Created account."
+  }
+}

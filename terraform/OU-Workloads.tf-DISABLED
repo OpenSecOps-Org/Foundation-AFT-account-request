@@ -1,3 +1,15 @@
+#######################################################################
+#
+# This file defines accounts under Workloads/SDLC (for the software
+# development life cycle, i.e. DEV and TEST) and Workloads/Prod (for
+# production). Copy, uncomment, and tailor accordingly. Remember to
+# substitute the OU ids (ou-xxxx-yyyyyyyy) where applicable.
+#
+# Remove the "-DISABLED" suffix from the file name so AFT and Terraform
+# will process the file.
+#
+#######################################################################
+
 
 # #######################################################################
 # #
@@ -10,7 +22,7 @@
 #   control_tower_parameters = {
 #     AccountEmail = "accounts+foobar-dev@yourcompany.com"
 #     AccountName  = "foobar-dev"                                
-#     ManagedOrganizationalUnit = "SDLC (ou-2r1m-cl6e2h8d)"  
+#     ManagedOrganizationalUnit = "SDLC (ou-xxxx-yyyyyyyy)"  
 #     SSOUserEmail              = "accounts+org@yourcompany.com"
 #     SSOUserFirstName          = "AWS Control Tower"
 #     SSOUserLastName           = "Admin"
@@ -33,6 +45,8 @@
 #     })
 #   }
 
+  account_customizations_name = ""
+
 #   change_management_parameters = {
 #     change_requested_by = "Your Name Here"
 #     change_reason       = "Created the account."
@@ -46,7 +60,7 @@
 #   control_tower_parameters = {
 #     AccountEmail = "accounts+foobar-test@yourcompany.com"
 #     AccountName  = "foobar-test"                                
-#     ManagedOrganizationalUnit = "SDLC (ou-2r1m-cl6e2h8d)"  
+#     ManagedOrganizationalUnit = "SDLC (ou-xxxx-yyyyyyyy)"  
 #     SSOUserEmail              = "accounts+org@yourcompany.com"
 #     SSOUserFirstName          = "AWS Control Tower"
 #     SSOUserLastName           = "Admin"
@@ -68,6 +82,8 @@
 #       "yourcompany-auditors"                = "ReadOnlyWideAccess"
 #     })
 
+  account_customizations_name = ""
+
 #   change_management_parameters = {
 #     change_requested_by = "Your Name Here"
 #     change_reason       = "Created the account."
@@ -81,7 +97,7 @@
 #   control_tower_parameters = {
 #     AccountEmail = "accounts+foobar-prod@yourcompany.com"
 #     AccountName  = "foobar-prod"                                
-#     ManagedOrganizationalUnit = "Prod (ou-2r1m-8vve4np2)"  
+#     ManagedOrganizationalUnit = "Prod (ou-xxxx-yyyyyyyy)"  
 #     SSOUserEmail              = "accounts+org@yourcompany.com"
 #     SSOUserFirstName          = "AWS Control Tower"
 #     SSOUserLastName           = "Admin"
@@ -103,6 +119,8 @@
 #       "yourcompany-auditors"                = "ReadOnlyWideAccess"
 #     })
 #   }
+
+  account_customizations_name = ""
 
 #   change_management_parameters = {
 #     change_requested_by = "Your Name Here"

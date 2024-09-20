@@ -3,7 +3,13 @@
 # This is the Sandbox OU, containing personal, experimental accounts with a 
 # cost cap. Copy and uncomment each time you need to create a new sandbox
 # account. Update all occurrences of John Doe and yourcompany. Don't forget
-# the module name.
+# the module name. NB: Doe not set SSOUserEmail, SSOUserFirstName, and
+# SSOUserLastName to the personal user's details - they should all point to
+# the system user defined during SSO setup. Access for the individual is set
+# up under sso_users in custom_fields.
+#
+# Remove the "-DISABLED" suffix from the file name so AFT and Terraform
+# will process the file.
 #
 ###############################################################################
 

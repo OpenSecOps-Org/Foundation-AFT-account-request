@@ -1,3 +1,18 @@
+###############################################################################
+#
+# This is the Suspended OU, containing suspended accounts. You will want to
+# remove all access from groups and users and also set the 
+# account_customizations_name parameter to the empty string. This will not
+# uninstall any such customisations, so there will still be need for manual
+# removal of such configuration and/or infrastructure, as AWS doesn't provide
+# any means of clearing all infrastructure in an account destined for removal.
+#
+# Remove the "-DISABLED" suffix from the file name so AFT and Terraform
+# will process the file.
+#
+###############################################################################
+
+
 # module "john-doe-account" {
 #   source = "./modules/aft-account-request"
 
@@ -26,7 +41,7 @@
 #     notification_email = "accounts@yourcompany.com"
 #   }
 
-#   account_customizations_name = "sandbox-customizations"
+#   account_customizations_name = ""
 
 #   change_management_parameters = {
 #     change_requested_by = "Your Name Here"

@@ -65,7 +65,7 @@ module "Networking" {
 
   custom_fields = {
     "sso_groups" = jsonencode({
-      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
       "yourcompany-network-administration"  = ["NetworkAdministratorAccess", "ReadOnlyWideAccess"]
       "yourcompany-auditors"                = "ReadOnlyWideAccess"
     })

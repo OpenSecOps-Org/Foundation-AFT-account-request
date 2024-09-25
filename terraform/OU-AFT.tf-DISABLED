@@ -30,7 +30,7 @@ module "AFT-Management" {
 
   custom_fields = {
     "sso_groups" = jsonencode({
-      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
       "yourcompany-account-administration"  = "AccountAdministratorAccess"
       "yourcompany-auditors"                = "ReadOnlyWideAccess"
     })

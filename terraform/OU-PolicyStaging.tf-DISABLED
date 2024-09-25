@@ -32,7 +32,7 @@ module "PolicyStagingInfraAccount" {
   custom_fields = {
     "sso_groups" = jsonencode({
       "yourcompany-cloud-administration"    = "DeveloperAccess"
-      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
       "yourcompany-auditors"                = "ReadOnlyWideAccess"
     })
   }
@@ -68,7 +68,7 @@ module "PolicyStagingSandboxAccount" {
   custom_fields = {
     "sso_groups" = jsonencode({
       "yourcompany-cloud-administration"    = "DeveloperAccess"
-      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
       "yourcompany-auditors"                = "ReadOnlyWideAccess"
     })
   }
@@ -104,7 +104,7 @@ module "PolicyStagingSecurityAccount" {
   custom_fields = {
     "sso_groups" = jsonencode({
       "yourcompany-cloud-administration"    = "DeveloperAccess"
-      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
       "yourcompany-auditors"                = "ReadOnlyWideAccess"
     })
   }
@@ -140,7 +140,7 @@ module "PolicyStagingWorkloadsAccount" {
   custom_fields = {
     "sso_groups" = jsonencode({
       "yourcompany-cloud-administration"    = "DeveloperAccess"
-      "yourcompany-security-administration" = ["ReadOnlyWideAccess"]
+      "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
       "yourcompany-auditors"                = "ReadOnlyWideAccess"
     })
   }

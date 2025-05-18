@@ -38,7 +38,6 @@
 #   custom_fields = {
 #     "sso_groups" = jsonencode({
 #       "FooBar"                              = ["DeveloperAccess", "ReadOnlyWideAccess"]
-#       "yourcompany-personalization-team"    = ["DeveloperAccess", "ReadOnlyWideAccess"]
 #       "yourcompany-platform-team"           = ["DeveloperAccess", "ReadOnlyWideAccess"]
 #       "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
 #       "yourcompany-network-administration"  = ["NetworkAdministratorAccess", "ReadOnlyWideAccess"]

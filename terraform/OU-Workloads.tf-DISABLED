@@ -41,6 +41,7 @@
 #       "yourcompany-platform-team"           = ["DeveloperAccess", "ReadOnlyWideAccess"]
 #       "yourcompany-security-administration" = ["SecurityAdministratorAccess", "ReadOnlyWideAccess"]
 #       "yourcompany-network-administration"  = ["NetworkAdministratorAccess", "ReadOnlyWideAccess"]
+#       "yourcompany-auditors"                = "ReadOnlyWideAccess"
 #     })
 #   }
 
